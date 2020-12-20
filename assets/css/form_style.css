@@ -1,0 +1,82 @@
+/*form sections*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #1A1A1D;
+    color: white
+}
+
+.form-sect{
+    border: 3px solid transparent;
+    background: linear-gradient(#1A1A1D, #1A1A1D)  padding-box, linear-gradient(to right, #950740, #C3073F)  border-box;
+    border-radius: 10px;
+    text-align: center;
+}
+button, .btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    margin: 25px auto;
+    background: linear-gradient(to right, #950740, #C3073F);
+    border-color: transparent;
+}
+.img-cont{
+    background: linear-gradient(to right, #950740, #C3073F);
+    padding: 5px 10px;
+    border-radius: 5px 0 0 5px;
+}
+.txt-inpt-cont input{
+    height: auto;
+    border-radius: 0 5px 5px 0;
+}
+.txt-inpt-cont img{
+    width: 15px;
+}
+.form-title{
+    border-bottom: 3px solid;
+    padding-bottom: 30px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+.radio-btn-cont{
+    padding-bottom: 30px;
+}
+.radio-btn-cont div{
+    margin-right: 10px;
+}
+.radio-custom-label{
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+@media only screen and (min-width: 769px){
+    /*.form-sect{*/
+    /*    width: 460px;*/
+    /*}*/
+}
+@media only screen and (max-width: 768px){
+    main{
+        padding: 0 25px;
+    }
+    .sect-cont section{
+        flex-basis: 100%;
+    }
+}
+@media only screen and (max-width: 480px){
+
+    /*.btn.btn-primary{*/
+    /*    width: 100px;*/
+    /*}*/
+}
+@media only screen and (max-width: 1024px){
+
+    .txt-inpt-cont{
+        flex-wrap: nowrap;
+    }
+    .sect-cont{
+        flex-wrap: wrap;
+    }
+}
