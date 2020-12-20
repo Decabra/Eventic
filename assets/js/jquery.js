@@ -1,4 +1,8 @@
 $(document).ready(function () {
-    $('.question-sect').hide();
-    $('.question-sect.active').show();
+
+    $(".divider").on("click", function(){
+
+    });
+    // $('.question-sect').hide();
+    // $('.question-sect.active').show();
 });
