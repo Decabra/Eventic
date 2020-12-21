@@ -58,7 +58,10 @@
       fixedStartDay: 1, // begin weeks by monday
       disableEmptyDetails: true,
       onDateSelect: function (date, events) {
-        window.location = "event_view.php?id="+date.getFullYear()+"-"+date.getMonth()+"-"+date.getDay();
+        const year = date.getUTCFullYear();
+        const month = date.getUTCMonth() + 1;
+        const day = date.getUTCDate()+1;
+        window.location = "event_view.php?id="+year+"-"+month+"-"+day;
       }
     });
 
