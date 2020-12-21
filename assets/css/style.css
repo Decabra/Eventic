@@ -27,6 +27,7 @@ a, a:hover{
     text-decoration: none;
 }
 .title + h3{
+    font-family: 'Poppins-Light';
     color: #4E4E50;
     font-size: 2.4rem;
 }
@@ -48,6 +49,7 @@ p{
     background: linear-gradient(to left, #950740, #C3073F);
 }
 .title{
+    line-height: 1;
     font-family: 'Poppins-BOLD';
     font-size: 6.6rem;
     letter-spacing: 2px;
