@@ -39,9 +39,13 @@ p{
     font-family: 'Poppins-Bold';
 }
 .butn{
+    transition: 0.5s;
     background: linear-gradient(to right, #950740, #C3073F);
     padding: 5px 20px;
     border-radius: 8px;
+}
+.butn:hover{
+    background: linear-gradient(to left, #950740, #C3073F);
 }
 .title{
     font-family: 'Poppins-BOLD';
@@ -57,12 +61,55 @@ p{
     font-size: 20px;
 }
 .lm-butn{
+    transition: 0.5s;
     border: 2px solid;
     border-radius: 8px;
     font-size: 20px;
     padding: 11px 40px;
 }
+.lm-butn:hover{
+    color: black;
+    background-color: white
+}
+.divider{
+    margin: 3rem 0;
+}
 .divider img{
     width: 40px;
     margin-right: 15px
 }
+
+/*Calendar start*/
+.calendar header{
+    padding: 0;
+    width: 27rem;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto 3em;
+}
+.calendar header .month{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins-Bold';
+    font-size: 40px;
+}
+.calendar header .month .year{
+    padding-left: 17px;
+}
+.calendar header .btn-prev, .calendar header .btn-next{
+    top: 16%;
+}
+
+.calendar-container{
+    position: relative;
+    margin: 50px auto;
+    max-width: 90%;
+    font-size: 2rem;
+}
+.calendar .day.disabled{
+    cursor: pointer;
+}
+.calendar .day.disabled:hover{
+    border: 2px solid #C3073F;
+}
+/*Calendar end*/
