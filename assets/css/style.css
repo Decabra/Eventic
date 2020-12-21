@@ -185,8 +185,44 @@ p{
 .widget-hall{
     margin-right: -25px;
 }
-.widget-calendr div, .widget-time div, .widget-hall span{
+.widget-calendr div, .widget-time div, .widget-hall div{
     margin-top: 20px;
 }
-
 /*Event View End*/
+@media only screen and (max-width: 860px){
+    .event-view main {
+        padding: 35px 25px;
+    }
+    section{
+        flex-wrap: wrap;
+    }
+    .sib-one{
+        flex-basis: 100%;
+    }
+    .sib-two{
+        flex-basis: 100%;
+        justify-content: center;
+    }
+    .widget-cont {
+        width: 100%;
+        margin-right:0;
+    }
+    nav{
+        flex-wrap: wrap;
+        padding-left: 10px;
+        justify-content: center!important;
+    }
+    .nav-sect-one{
+        flex-basis: 8.3333%;
+    }
+    .nav-sect-two{
+        flex-basis: 100%;
+        font-size: 15px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .nav-sect-two a{
+        margin: 0 5px;
+
+    }
+}
