@@ -57,6 +57,9 @@
     $("#event-calender").simpleCalendar({
       fixedStartDay: 1, // begin weeks by monday
       disableEmptyDetails: true,
+      onDateSelect: function (date, events) {
+        window.location = "event_view.php?id="+date.getFullYear()+"-"+date.getMonth()+"-"+date.getDay();
+      }
     });
 
     $("#upcoming-event-divider").on('click', function (e) {

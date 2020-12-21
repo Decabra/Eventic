@@ -3,7 +3,11 @@ require_once('api/bootstrap.php');
 
 if(!empty($_GET["id"])) {
     $id=filterData($_GET["id"]);
-    $sql=mysqli_query($con, "SELECT * FROM events WHERE id={$id}");
+    if (DateTime::createFromFormat('Y-m-d', $id) !== FALSE) {
+        $sql=mysqli_query($con, "SELECT * FROM events WHERE date between curdate() and '{$id}'");
+    } else {
+        $sql=mysqli_query($con, "SELECT * FROM events WHERE id={$id}");
+    }
     $data=mysqli_fetch_array($sql);
     if(!empty($data)) {
         ?>
