@@ -115,3 +115,78 @@ p{
     border: 2px solid #C3073F;
 }
 /*Calendar end*/
+/*Event View Start*/
+.event-view main{
+    padding: 35px 65px;
+}
+.tic{
+    color:#C3073F;
+}
+.logo.eventic{
+    font-size: 30px;
+}
+.logo.eventic + div{
+    font-size: 17px;
+}
+.event-img-cont img{
+    width: 60px;
+}
+.event-title{
+    font-size: 2.3rem;
+    font-family: 'Poppins-Bold';
+}
+.organise-by{
+    font-size: 15px;
+}
+.event-organiser{
+    font-size: 1.4rem;
+}
+.hor-rule{
+    margin: 20px 0 40px 0;
+    width: 15rem;
+    height: 2px;
+    background: #c0073f;
+}
+.eve-overview{
+    font-size: 1.7rem;
+    margin: 30px 0 35px 0;
+}
+.event-detail{
+    font-size: 1.3rem;
+}
+.event-description{
+    font-size: 18px;
+    margin-top: 15px;
+}
+.event-view .reg.butn{
+    padding: 6px 66px;
+}
+.time-cont{
+    font-size: 2.5rem;
+}
+.widget-cont{
+    width: 60%;
+}
+.widget-cont .widgets{
+    margin-bottom: 6rem;
+}
+.time-letter .d-letter{
+    margin-left: 5px;
+}
+.time-letter .h-letter{
+    margin-left: 10px;
+}
+.time-letter .m-letter{
+    margin-right: -9px;
+}
+.widget-calendr{
+    margin-left: -25px;
+}
+.widget-hall{
+    margin-right: -25px;
+}
+.widget-calendr div, .widget-time div, .widget-hall span{
+    margin-top: 20px;
+}
+
+/*Event View End*/
