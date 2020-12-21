@@ -17,7 +17,7 @@ nav{
     padding-left: 2em;
 }
 main{
-    padding: 55px 31px;
+    padding: 0 31px;
 }
 img{
     width: 100%;
@@ -29,11 +29,11 @@ a, a:hover{
 .title + h3{
     font-family: 'Poppins-Light';
     color: #4E4E50;
-    font-size: 2.4rem;
+    font-size: 2.9vw;
 }
 p{
     margin: 2em 0;
-    font-size: 1.3em;
+    font-size: 1.5vw;
 }
 .logo{
     font-size: 35px;
@@ -51,7 +51,7 @@ p{
 .title{
     line-height: 1;
     font-family: 'Poppins-BOLD';
-    font-size: 6.6rem;
+    font-size: 8vw;
     letter-spacing: 2px;
     background: linear-gradient(to right, #950740, #C3073F);
     -webkit-background-clip: text;
@@ -59,22 +59,27 @@ p{
 
 }
 .reg.butn{
-    padding: 12px 49px;
-    font-size: 20px;
+    width: 18vw;
+    padding: 12px;
+    font-size: 1.5vw;
+    text-align: center;
 }
 .lm-butn{
+    width: 15vw;
     transition: 0.5s;
     border: 2px solid;
     border-radius: 8px;
-    font-size: 20px;
-    padding: 11px 40px;
+    font-size: 1.5vw;
+    padding: 11px;
+    text-align: center;
 }
 .lm-butn:hover{
     color: black;
     background-color: white
 }
 .divider{
-    margin: 3rem 0;
+    margin-top: -20px;
+    font-size: 20px;
 }
 .divider img{
     width: 40px;
@@ -159,6 +164,7 @@ p{
     margin-top: 15px;
 }
 .event-view .reg.butn{
+    font-size: 1.2rem;
     padding: 6px 66px;
 }
 .time-cont{
@@ -194,7 +200,7 @@ p{
         padding: 35px 25px;
     }
     section{
-        flex-wrap: wrap;
+        flex-wrap: wrap!important;
     }
     .sib-one{
         flex-basis: 100%;
@@ -217,12 +223,50 @@ p{
     }
     .nav-sect-two{
         flex-basis: 100%;
-        font-size: 15px;
+        font-size: 17px;
         flex-wrap: wrap;
         justify-content: space-between;
     }
     .nav-sect-two a{
         margin: 0 5px;
 
+    }
+    .title{
+        font-size: 15vw;
+    }
+    .title + h3{
+        font-size: 5.4vw;
+    }
+    #home p{
+        font-size: 3.1vw;
+    }
+    #home .lm-butn{
+        width: 27vw;
+        font-size: 3.5vw;
+    }
+    #home .reg.butn{
+        width: 33vw;
+        font-size: 3.5vw;
+    }
+    #home .calendar-container{
+        font-size: 1rem;
+    }
+    #home main{
+        padding: 55px 10px;
+    }
+    .home-img{
+        position: absolute;
+        z-index: -1;
+        opacity: 6%;
+        top: 25%;
+    }
+    .calendar header{
+        width: 15rem;
+    }
+    .calendar header .month{
+        font-size: 20px;
+    }
+    .calendar header .btn-prev, .calendar header .btn-next {
+        top: 2%;
     }
 }
