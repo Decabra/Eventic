@@ -8,7 +8,7 @@ if(!empty($_GET["id"])) {
     } else {
         $sql=mysqli_query($con, "SELECT * FROM events WHERE id={$id}");
     }
-    $data=mysqli_fetch_array($sql);
+    if($sql) $data=mysqli_fetch_array($sql);
     if(!empty($data)) {
         ?>
 
