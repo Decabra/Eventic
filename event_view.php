@@ -102,7 +102,7 @@ if(!empty($_GET["id"])) {
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 // Display the result in the element with id="demo"
-                document.getElementById("counter").innerHTML = "<span>"+ days + "</span><span>" + hours + "</span><span>:</span><span>"
+                document.getElementById("counter").innerHTML = "<span>"+ days + "</span><span>:</span><span>" + hours + "</span><span>:</span><span>"
                     + minutes + "</span><span>:</span><span>" + seconds + "</span>";
 
                 // If the count down is finished, write some text

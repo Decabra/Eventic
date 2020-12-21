@@ -17,49 +17,50 @@ if($sql) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Eventic</title>
-    <!--  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">-->
-    <!--  <link rel="stylesheet" href="assets/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="assets/css/poppins.css">
     <link rel="stylesheet" href="assets/css/flexer.css">
     <link rel="stylesheet" href="assets/css/simple-calendar.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-<header id="header">
+<body id="home">
+<header id="site-header" >
     <nav class="fx-row">
-        <div class="logo fx-col-7">LOGO</div>
-        <div class="fx-row justify-even fx-col-5 align-center">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Sign in</a>
+        <div class=" nav-sect-one logo fx-col-7">LOGO</div>
+        <div class="nav-sect-two fx-row justify-even fx-col-5 align-center">
+            <a href="home.html">Home</a>
+            <a href="#/">About</a>
+            <a href="#/">Sign in</a>
             <a href="register.html" class="butn">Register</a>
         </div>
     </nav>
-    <div id="bg-area" class="fx-col">
-        <img id="header-bg-image" src="assets/img/main illustration.svg" alt="">
-        <div class="fx-col-3">
-            <div class="title">EVENTIC</div>
-            <h3>A celebration of success</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit. Dolor ea, expedita om<br>nis quia earum esse ipsa ipsum.</p>
-            <div class="fx-row">
-                <a href="register.html" class="butn reg">Get Registered</a>
-                <a href="" class="lm-butn m-l-1">Learn More</a>
-            </div>
-        </div>
-        <a id="upcoming-event-divider" class="divider fx-row justify-center align-center" href="#event-calender">
-            <img src="assets/img/chevron_highlight.png" alt="">
-            <div>View upcoming events</div>
-        </a>
-    </div>
 </header>
 <main>
+    <section class="fx-row align-center fx-nowrap">
+        <div class="home-content fx-col-3">
+            <div class="title">EVENTIC</div>
+            <h3>A celebration of sucess</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit. Dolor ea, expedita om<br>nis quia earum esse ipsa ipsum.</p>
+            <div class="fx-row justify-between">
+                <a href="register.html" class="butn reg">Get Registered</a>
+                <a href="" class="lm-butn">Learn More</a>
+            </div>
+        </div>
+        <div class="home-img fx-col-9">
+            <img src="assets/img/main illustration.svg" alt="">
+        </div>
+    </section>
+    <a id="upcoming-event-divider" class="divider fx-row justify-center align-center" href="#event-calender">
+        <div>
+            <img src="assets/img/chevron_highlight.png" alt="">
+        </div>
+        <div>View upcoming events</div>
+    </a>
     <section>
         <div id="event-calender" class="fx-row calendar-container fx-col"></div>
     </section>
 </main>
-
 <script src="assets/libs/jquery/jquery-3.5.1.min.js"></script>
 <script src="assets/js/jquery.simple-calendar.js"></script>
 <script src="assets/js/main.js" type="text/javascript"></script>

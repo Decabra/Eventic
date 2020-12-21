@@ -232,7 +232,7 @@ p{
 
     }
     .title{
-        font-size: 15vw;
+        font-size: 10vw;
     }
     .title + h3{
         font-size: 5.4vw;
@@ -241,18 +241,18 @@ p{
         font-size: 3.1vw;
     }
     #home .lm-butn{
-        width: 27vw;
-        font-size: 3.5vw;
+        width: 21vw;
+        font-size: 2.5vw;
     }
     #home .reg.butn{
-        width: 33vw;
-        font-size: 3.5vw;
+        width: 25vw;
+        font-size: 2.5vw;
     }
     #home .calendar-container{
         font-size: 1rem;
     }
     #home main{
-        padding: 55px 10px;
+        padding: 0 10px;
     }
     .home-img{
         position: absolute;
@@ -268,5 +268,11 @@ p{
     }
     .calendar header .btn-prev, .calendar header .btn-next {
         top: 2%;
+    }
+    .divider{
+        margin-top: 40px;
+    }
+    .home-content{
+        flex-basis: 100%;
     }
 }
