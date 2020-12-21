@@ -6,28 +6,28 @@
 
   // Create the defaults once
   var pluginName = "simpleCalendar",
-    defaults = {
-      months: ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'], //string of months starting from january
-      days: ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'], //string of days starting from sunday
-      displayYear: true, // display year in header
-      fixedStartDay: true, // Week begin always by monday or by day set by number 0 = sunday, 7 = saturday, false = month always begin by first day of the month
-      displayEvent: true, // display existing event
-      disableEventDetails: false, // disable showing event details
-      disableEmptyDetails: false, // disable showing empty date details
-      events: [], // List of event
-      onInit: function (calendar) {}, // Callback after first initialization
-      onMonthChange: function (month, year) {}, // Callback on month change
-      onDateSelect: function (date, events) {
-        // $(".calendar table tbody tr td div").on("click", function() {
-        //   // alert("Hey");
-        //   $(".calendar table tbody tr td div").removeClass("today");
-        //     $(this).addClass("today");
-        // });
-      }, // Callback on date selection
-      onEventSelect: function () {},              // Callback fired when an event is selected     - see $(this).data('event')
-      onEventCreate: function( $el ) {},          // Callback fired when an HTML event is created - see $(this).data('event')
-      onDayCreate:   function( $el, d, m, y ) {}  // Callback fired when an HTML day is created   - see $(this).data('today'), .data('todayEvents')
-    };
+      defaults = {
+        months: ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'], //string of months starting from january
+        days: ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'], //string of days starting from sunday
+        displayYear: true, // display year in header
+        fixedStartDay: true, // Week begin always by monday or by day set by number 0 = sunday, 7 = saturday, false = month always begin by first day of the month
+        displayEvent: true, // display existing event
+        disableEventDetails: false, // disable showing event details
+        disableEmptyDetails: false, // disable showing empty date details
+        events: [], // List of event
+        onInit: function (calendar) {}, // Callback after first initialization
+        onMonthChange: function (month, year) {}, // Callback on month change
+        onDateSelect: function (date, events) {
+          // $(".calendar table tbody tr td div").on("click", function() {
+          //   // alert("Hey");
+          //   $(".calendar table tbody tr td div").removeClass("today");
+          //     $(this).addClass("today");
+          // });
+        }, // Callback on date selection
+        onEventSelect: function () {},              // Callback fired when an event is selected     - see $(this).data('event')
+        onEventCreate: function( $el ) {},          // Callback fired when an HTML event is created - see $(this).data('event')
+        onDayCreate:   function( $el, d, m, y ) {}  // Callback fired when an HTML day is created   - see $(this).data('today'), .data('todayEvents')
+      };
 
   // The actual plugin constructor
   function Plugin(element, options) {
@@ -47,10 +47,10 @@
 
       var calendar = $('<div class="calendar"></div>');
       var header = $('<header>' +
-        '<h2 class="month"></h2>' +
-        '<a class="simple-calendar-btn btn-prev" href="#"></a>' +
-        '<a class="simple-calendar-btn btn-next" href="#"></a>' +
-        '</header>');
+          '<h2 class="month"></h2>' +
+          '<a class="simple-calendar-btn btn-prev" href="#"></a>' +
+          '<a class="simple-calendar-btn btn-next" href="#"></a>' +
+          '</header>');
 
       this.updateHeader(todayDate, header);
       calendar.append(header);
@@ -151,10 +151,10 @@
       body.append(thead);
       body.append(tbody);
 
-      var eventContainer = $('<div class="event-container"><div class="close"></div><div class="event-wrapper"></div></div>');
+      //var eventContainer = $('<div class="event-container"><div class="close"></div><div class="event-wrapper"></div></div>');
 
       calendar.append(body);
-      calendar.append(eventContainer);
+      //calendar.append(eventContainer);
     },
     changeMonth: function (value) {
       this.currentDate.setMonth(this.currentDate.getMonth() + value, 1);
@@ -183,8 +183,8 @@
         var date = new Date($(this).data('date'));
         var events = plugin.getDateEvents(date);
         if (!$(this).hasClass('disabled')) {
-          plugin.fillUp(e.pageX, e.pageY);
-          plugin.displayEvents(events);
+          //plugin.fillUp(e.pageX, e.pageY);
+          //plugin.displayEvents(events);
         }
         plugin.settings.onDateSelect(date, events);
       });
@@ -202,11 +202,11 @@
         var startDate = new Date(event.startDate);
         var endDate = new Date(event.endDate);
         var $event = $('' +
-          '<div class="event">' +
-          ' <div class="event-hour">' + startDate.getHours() + ':' + (startDate.getMinutes() < 10 ? '0' : '') + startDate.getMinutes() + '</div>' +
-          ' <div class="event-date">' + plugin.formatDateEvent(startDate, endDate) + '</div>' +
-          ' <div class="event-summary">' + event.summary + '</div>' +
-          '</div>');
+            '<div class="event">' +
+            ' <div class="event-hour">' + startDate.getHours() + ':' + (startDate.getMinutes() < 10 ? '0' : '') + startDate.getMinutes() + '</div>' +
+            ' <div class="event-date">' + plugin.formatDateEvent(startDate, endDate) + '</div>' +
+            ' <div class="event-summary">' + event.summary + '</div>' +
+            '</div>');
 
         $event.data( 'event', event );
         $event.click( plugin.settings.onEventSelect );
